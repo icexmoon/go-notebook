@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go-notebook/ch2/formater"
+
+	"github.com/icexmoon/go-notebook/ch2/formater"
 )
 
 func main() {
