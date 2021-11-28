@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	myinterface "go-notebook/ch6/my_interface"
+
+	myinterface "github.com/icexmoon/go-notebook/ch6/my_interface"
 )
 
 type myByteArr []byte

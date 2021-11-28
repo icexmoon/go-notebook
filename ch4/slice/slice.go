@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/icexmoon/go-notebook/ch4/my_append"
+	"github.com/icexmoon/github.com/icexmoon/go-notebook/ch4/my_append"
 )
 
 func main() {

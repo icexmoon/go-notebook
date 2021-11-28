@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	pkgv "go-notebook/ch11/pkgvar"
+
+	pkgv "github.com/icexmoon/go-notebook/ch11/pkgvar"
 )
 
 func main() {

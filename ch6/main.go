@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	myinterface "go-notebook/ch6/my_interface"
-	sc "go-notebook/ch6/string_container"
 	"log"
+
+	myinterface "github.com/icexmoon/go-notebook/ch6/my_interface"
+	sc "github.com/icexmoon/go-notebook/ch6/string_container"
 )
 
 func readAndPrint(reader myinterface.Reader) {

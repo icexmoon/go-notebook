@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "go-notebook/ch11/config"
+	_ "github.com/icexmoon/go-notebook/ch11/config"
 )
 
 func main() {
