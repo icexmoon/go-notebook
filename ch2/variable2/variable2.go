@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/icexmoon/github.com/icexmoon/go-notebook/ch2/formater"
+	"github.com/icexmoon/go-notebook/ch2/formater"
 )
 
 func main() {
