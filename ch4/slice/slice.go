@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go-notebook/ch4/my_append"
+
+	"github.com/icexmoon/go-notebook/ch4/my_append"
 )
 
 func main() {
