@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        function send_json() {
+            $.ajax({
+                url: "/user_submit",
+                type: "PUT",
+                data: JSON.stringify({
+                    name: $("input[name=name]").val(),
+                    age: $("input[name=age]").val()
+                }),
+                dataType: "json",
+                contentType: "application/json",
+                async: true,
+                success: function (result, status, xhr) {
+                    console.log(result);
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    name:<input type="text" name="name" value="icexmoon" /><br />
+    age:<input type="text" name="age" value="19" /><br />
+    <button onclick="send_json()">send json.</button>
+</body>
+
+</html>
