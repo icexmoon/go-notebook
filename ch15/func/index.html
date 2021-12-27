@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{ template "header.html" }}
+</head>
+
+<body>
+    <table>
+        <tr>
+            {{ with "" }}
+            <th colspan="4">{{ . }}</th>
+            {{ else }}
+            <th colspan="4">成绩汇总表</th>
+            {{ end }}
+        </tr>
+        <tr>
+            <th>姓名</th>
+            <th>语文</th>
+            <th>数学</th>
+            <th>英语</th>
+        </tr>
+        {{ range $key,$val := . }}
+        <tr>
+            <td>{{ $key }}</td>
+            {{ range $val }}
+            {{ if . | score_pass }}
+            <td style="background-color: greenyellow;">{{ printf "%.2f" . }}</td>
+            {{ else }}
+            <td style="background-color: red;">{{ printf "%.2f" . }}</td>
+            {{ end }}
+            {{ end }}
+        </tr>
+        {{ end }}
+    </table>
+</body>
+<footer>
+    {{ template "footer.html" }}
+</footer>
+
+</html>

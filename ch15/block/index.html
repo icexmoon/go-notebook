@@ -1,0 +1,17 @@
+{{ define "html" }}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{ block "header" . }}
+    <h1>This is a default header.</h1>
+    {{ end }}
+</head>
+
+<body>
+    <h1>{{ . }}</h1>
+    <h1>index page.</h1>
+</body>
+
+</html>
+{{ end }}

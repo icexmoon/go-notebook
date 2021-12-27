@@ -1,0 +1,20 @@
+{{ define "html" }}
+<!DOCTYPE html>
+<html>
+<header>{{ template "header" }}</header>
+
+<body>
+    <h1>This is index page.</h1>
+</body>
+<footer>{{ template "footer" }}</footer>
+
+</html>
+{{ end }}
+{{ define "header" }}
+<h1>Welcome to my homepage</h1>
+<p>My name is icexmoon</p>
+{{ end }}
+
+{{ define "footer" }}
+<h2>All copyright by icexmoon.xyz</h2>
+{{ end }}
