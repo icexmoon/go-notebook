@@ -17,18 +17,10 @@ func (u *User) String() string {
 }
 
 func (u *User) Get() {
-	// Db.QueryRow(`SELECT name,password,ctime
-	// FROM "user"
-	// WHERE id=$1`, u.Id).Scan(&u.Name, &u.Password, &u.Ctime)
 	Db.First(u, u.Id)
 }
 
 func (u *User) GetByName() {
-	// row := Db.QueryRow(`SELECT id,password,ctime
-	// FROM "user"
-	// WHERE name=$1`, u.Name)
-	// fmt.Println(*row)
-	// row.Scan(&u.Id, &u.Password, &u.Ctime)
 	Db.Where("name=?", u.Name).First(u)
 }
 
@@ -39,7 +31,6 @@ func (u *User) CheckPassword(pwd string) bool {
 func CheckLogin(uname string, pwd string) (u User, ok bool) {
 	u = User{Name: uname}
 	u.GetByName()
-	// fmt.Println(u.String())
 	if u.Id == 0 {
 		ok = false
 		return
