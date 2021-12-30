@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <div>welcome {{ .UserName }}!<a href="/exit">exit</a></div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>content</th>
+                <th>author</th>
+                <th>option</th>
+            </tr>
+            {{ range .Articles }}
+            <tr>
+                <td>{{ .Id }}</td>
+                <td>{{ .Content }}</td>
+                <td>{{ .Author }}</td>
+                <td></td>
+            </tr>
+            {{ else }}
+            <tr>
+                <td colspan="4">no articles to show.</td>
+            </tr>
+            {{ end }}
+        </table>
+        <form action="/add_article" method="post">
+            add new article:<br/>
+            <textarea name="content"></textarea><br/>
+            <input type="submit" value="add"/><br/>
+        </form>
+    </body>
+</html>

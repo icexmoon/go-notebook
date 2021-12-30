@@ -2,3 +2,5 @@
 *.pem
 *.cer
 *.~vsdx
+ch16/csv/data.csv
+ch16/json/data.json
