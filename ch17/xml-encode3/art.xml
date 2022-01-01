@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article id="1" uid="1">
+	<Content>this is a art&#39;s content.</Content>
+	<comments>
+		<comment id="1" uid="1">first comment content.</comment>
+		<comment id="2" uid="1">second comment content.</comment>
+		<comment id="3" uid="2">third comment content.</comment>
+	</comments>
+</article>
