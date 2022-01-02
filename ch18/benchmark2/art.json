@@ -1,0 +1,22 @@
+{
+	"id": 1,
+	"content": "this is a art's content.",
+	"comments": [
+		{
+			"id": 1,
+			"content": "first comment content.",
+			"uid": 1
+		},
+		{
+			"id": 2,
+			"content": "second comment content.",
+			"uid": 1
+		},
+		{
+			"id": 3,
+			"content": "third comment content.",
+			"uid": 2
+		}
+	],
+	"uid": 1
+}

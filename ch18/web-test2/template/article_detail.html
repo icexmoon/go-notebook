@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{{ template "header" }}
+
+<body>
+
+    <h3>Author:{{ .User.Name }}</h3>
+    <h3>Content:</h3>
+    <h5>{{ .Article.Content }}</h5>
+    <h3>Comments:</h3>
+    {{ range .Comments }}
+    <h5>{{ .Content }}</h5>
+    {{ end }}
+    <h3>add comment:</h3>
+    <form action="/add_comment?art_id={{ .Article.Id }}" method="post">
+        <textarea name="content"></textarea>
+        <br />
+        <input type="submit" value="add" />
+    </form>
+</body>
+
+</html>
