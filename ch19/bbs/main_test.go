@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/icexmoon/go-notebook/ch18/web-check/api"
+	"github.com/icexmoon/go-notebook/ch19/bbs/api"
 	"github.com/julienschmidt/httprouter"
 	. "gopkg.in/check.v1"
 )
