@@ -1,0 +1,35 @@
+<html>
+    {{ template "header" }}
+    <body>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>content</th>
+                <th>author</th>
+                <th>option</th>
+            </tr>
+            {{ range $key, $value := .Articles }}
+            <tr>
+                <td>{{ $value.Id }}</td>
+                <td>{{ $value.Content }}</td>
+                <td>{{ $value.Author }}</td>
+                <td>
+                    <a href="/article?id={{ $value.Id }}">detail</a>
+                    {{ if $value.ShowOpt }}
+                    <a href="/del_art?art_id={{ $value.Id }}">delete</a>
+                    {{ end }}
+                </td>
+            </tr>
+            {{ else }}
+            <tr>
+                <td colspan="4">no articles to show.</td>
+            </tr>
+            {{ end }}
+        </table>
+        <form action="/add_article" method="post">
+            add new article:<br/>
+            <textarea name="content"></textarea><br/>
+            <input type="submit" value="add"/><br/>
+        </form>
+    </body>
+</html>
