@@ -7,6 +7,7 @@ import (
 	"errors"
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 	"strconv"
 	"time"
@@ -230,5 +231,8 @@ func main() {
 	apiRouter.GET("/api/article/:id", api.ApiLoginCheck(api.ApiArticleDetail))
 	apiRouter.DELETE("/api/article/:id", api.ApiLoginCheck(api.ApiDelArticle))
 	apiRouter.POST("/api/article", api.ApiLoginCheck(api.ApiAddArticle))
-	http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
